@@ -1,0 +1,72 @@
+/* Variables */
+:root {
+  --black: #042940;
+  --green: #005c53;
+  --dark-lime: #9fc131;
+  --lime: #dbf227;
+  --khaki: #d6d58e;
+  --white: #f7f8fa;
+  --font-size: 1.3rem;
+  --mono: "Oxygen mono", monospace;
+  --sans: Oxygen, sans-serif;
+}
+
+/* Basic Styling of document */
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--sans);
+  background-color: var(--black);
+  color: var(--white);
+  font-size: var(--font-size);
+}
+
+/* Headings */
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+.box-container {
+  display: flex;
+  gap: 10px;
+}
+
+.box {
+  width: 50px;
+  height: 50px;
+}
+
+.color-black {
+  background-color: var(--black);
+}
+
+.color-green {
+  background-color: var(--green);
+}
+
+.color-dark-lime {
+  background-color: var(--dark-lime);
+}
+
+.color-lime {
+  background-color: var(--lime);
+}
+
+.color-khaki {
+  background-color: var(--khaki);
+}
+
+.color-white {
+  background-color: var(--white);
+}
