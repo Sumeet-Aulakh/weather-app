@@ -3,18 +3,21 @@ import fetchWeather from "./fetchWeather.js";
 
 const Dashboard = () => {
   const [weatherData, setWeatherData] = useState();
+  const [location, setLocation] = useState("Winnipeg");
+  const [temperature, setTemperature] = useState(null);
+
+  const data = [];
 
   useEffect(() => {
-    const data = fetchWeather();
+    const data = fetchWeather(location);
     data.then((res) => {
       processData(res);
     });
   }, []);
 
   const processData = (data) => {
-    for (let property in data) {
-      console.log(property, data[property]);
-    }
+    setLocation(data.location.name);
+    setTemperature(data.current.temp_c);
   };
 
   return (
@@ -24,7 +27,16 @@ const Dashboard = () => {
       <div className="box color-lime" />
       <div className="box color-khaki" />
       <div className="box color-white" />
-      <div> {weatherData}</div>
+      <input
+        type="text"
+        value={location}
+        // onChange={(e) => setLocation(e.target.value)}
+      />
+      <button> Check Weather </button>
+      <div>
+        {" "}
+        Location {location}: {temperature}°C{" "}
+      </div>
     </div>
   );
 };
