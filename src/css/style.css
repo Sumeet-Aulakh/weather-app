@@ -92,8 +92,7 @@ h3 {
   border-radius: 25px;
 }
 
-.card .weather-icon {
-  width: 100px;
-  height: 100px;
-  margin: 0 auto;
+.card img {
+  width: auto;
+  height: auto;
 }

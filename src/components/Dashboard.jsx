@@ -8,7 +8,6 @@ const list = [
   "Ottawa",
   "Edmonton",
   "Winnipeg",
-  "Quebec City",
   "Hamilton",
 ];
 
