@@ -1,0 +1,94 @@
+/* Variables */
+:root {
+  --background: hsl(265, 40%, 6%);
+  --dark-accent: rgb(244, 42, 139);
+  --dark-accent-dimmed: rgba(244, 42, 139, 0.2);
+  --accent: #1f89db;
+  --compliment: #00ffe2;
+  --foreground: #c8c8c8;
+  --grey: #464646;
+  --font-size: 1.3rem;
+  --mono: "Oxygen mono", monospace;
+  --sans: Oxygen, sans-serif;
+}
+
+/* Basic Styling of document */
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--sans);
+  background-color: var(--background);
+  background-image: url("../public/background-svg.svg");
+  color: var(--foreground);
+  font-size: var(--font-size);
+}
+
+/* Headings */
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+.color-background {
+  background-color: var(--background);
+  background-image: url("../public/background-svg.svg");
+}
+
+.color-green {
+  background-color: var(--green);
+}
+
+.color-dark-accent {
+  background-color: var(--dark-accent);
+}
+
+.color-accent {
+  background-color: var(--accent);
+}
+
+.color-compliment {
+  background-color: var(--compliment);
+}
+
+.color-foreground {
+  background-color: var(--foreground);
+}
+
+.gradient {
+  background: rgb(255, 23, 228);
+  background: radial-gradient(
+    circle,
+    rgba(255, 23, 228, 1) 0%,
+    rgba(109, 41, 254, 1) 100%
+  );
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: var(--background);
+  background-image: url("../public/background-svg.svg");
+  padding: 4rem 1rem;
+}
+
+.card {
+  width: 600px;
+  background-color: var(--background);
+  margin: 2rem auto 4rem auto;
+  border-left: 1px solid var(--accent);
+  border-top: 1px solid var(--accent);
+  box-shadow: 10px 10px 20px var(--dark-accent-dimmed);
+
+  padding: 1rem;
+  border-radius: 25px;
+}

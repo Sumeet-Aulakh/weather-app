@@ -1,6 +1,6 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { createRoot } from "react-dom/client";
-import Dashboard from "./components/Dashboard.jsx";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Dashboard from "./Dashboard";
 
 const App = () => {
   return (
