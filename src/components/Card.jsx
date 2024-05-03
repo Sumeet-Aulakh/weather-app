@@ -6,6 +6,7 @@ const Card = (props) => {
   const [current, setCurrent] = useState({});
   const [isDay, setIsDay] = useState(1);
   const [icon_number, setIcon_number] = useState(0);
+  const [text, setText] = useState("");
   const [time, setTime] = useState("");
 
   useEffect(() => {
@@ -21,6 +22,8 @@ const Card = (props) => {
     setIcon_number(
       conditions.substring(conditions.length - 7, conditions.length - 4)
     );
+    let conditionsText = "" + res.current.condition.text;
+    setText(conditionsText);
     setTime(res.location.localtime);
     setIsDay(res.current.is_day);
   };
@@ -29,7 +32,6 @@ const Card = (props) => {
     <div className="card-div">
       <div className="card">
         <div className="card-name">{location.name}</div>
-        <div className="card-time">{time.substring(10)}</div>
         <div className="card-temp-c">{current.temp_c}°</div>
         <div className="card-temp-f hidden">{current.temp_f}°</div>
         {icon_number != 0 ? (
@@ -39,10 +41,10 @@ const Card = (props) => {
             className="card-icon"
           />
         ) : null}
-        <div className="card-feelslike-c hidden">
-          FEELS LIKE: {current.feelslike_c}°
+        <div className="card-text-time-container">
+          {text != "" ? <div className="card-text">{text}</div> : null}
+          <div className="card-time">{time.substring(10)}</div>
         </div>
-        <div className="card-feelslike-c hidden">{current.feelslike_f}°</div>
       </div>
     </div>
   );
