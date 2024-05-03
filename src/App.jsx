@@ -1,7 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { createRoot } from "react-dom/client";
 import Dashboard from "./components/Dashboard.jsx";
-
 const App = () => {
   return (
     <BrowserRouter>

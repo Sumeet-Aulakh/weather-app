@@ -1,4 +1,5 @@
 import Card from "./Card";
+import TopBar from "./TopBar";
 
 const list = [
   "Toronto",
@@ -13,10 +14,16 @@ const list = [
 
 const Dashboard = () => {
   return (
-    <div className="card-container">
-      {list.map((city, index) => {
-        return <Card key={index} city={city} />;
-      })}
+    <div>
+      {/*<div className="top-bar-container">
+        <TopBar />
+  </div>
+      <div className="gradient"></div>*/}
+      <div className="card-container">
+        {list.map((city, index) => {
+          return <Card key={index} city={city} />;
+        })}
+      </div>
     </div>
   );
 };
