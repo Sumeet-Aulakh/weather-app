@@ -12,13 +12,17 @@ const list = [
   "Hamilton",
 ];
 
-const Dashboard = () => {
+const Dashboard = ({ onStateChange }) => {
+  const onStateChangeInDashboard = () => {
+    console.log("on State triggered in Dashboard");
+    onStateChange();
+  };
+
   return (
     <div>
-      {/*<div className="top-bar-container">
-        <TopBar />
-  </div>
-      <div className="gradient"></div>*/}
+      <div className="top-bar-container">
+        <TopBar onStateChange={onStateChangeInDashboard} />
+      </div>
       <div className="card-container">
         {list.map((city, index) => {
           return <Card key={index} city={city} />;

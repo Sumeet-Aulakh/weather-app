@@ -65,12 +65,8 @@ h3 {
 }
 
 .gradient {
-  background: rgb(255, 23, 228);
-  background: radial-gradient(
-    circle,
-    rgba(255, 23, 228, 1) 0%,
-    rgba(109, 41, 254, 1) 100%
-  );
+  background: #4374a5;
+  background: linear-gradient(circle, #1f89db 0%, #4374a5 100%);
   height: 2px;
 }
 
@@ -169,7 +165,6 @@ h3 {
   padding: 1rem;
   background-color: var(--background-dark);
   color: var(--foreground-light);
-  border-bottom: 1px solid var(--light-accent);
 }
 
 /* Toggle Button */

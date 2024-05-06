@@ -10,7 +10,7 @@ const Card = (props) => {
   const [time, setTime] = useState("");
 
   useEffect(() => {
-    const data = fetchWeather(props.city).then((res) => {
+    fetchWeather(props.city).then((res) => {
       processResponse(res);
     });
   }, []);
